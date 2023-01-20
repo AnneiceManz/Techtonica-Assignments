@@ -1,7 +1,11 @@
 body {
     background-color: #158000;
+    color: pink;
+    font-family:'Quicksand', sans-serif;;
 }
+
 h1, h3, h4{
     color: white;
     font-family: 'Parisienne', cursive;
 }
+
