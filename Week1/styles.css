@@ -5,6 +5,7 @@ body {
 }
 
 h1, h3, h4{
+
     color: white;
     font-family: 'Parisienne', cursive;
 }
@@ -15,4 +16,7 @@ a:link, a:visited {
 a:hover {
     color: white;
 }
-
+.about {
+    align-content: left;
+    text-align: center;
+}
