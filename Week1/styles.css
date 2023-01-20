@@ -34,6 +34,14 @@ a:hover {
     color: white;
 }
 
-#left {
-    
+.left {
+    width: 600px;
+    float: left;
+    margin-top: 30px;
+}
+
+.right {
+    width: 600px;
+    float: left;
+    margin-left: 60px;
 }
