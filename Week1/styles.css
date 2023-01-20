@@ -9,3 +9,10 @@ h1, h3, h4{
     font-family: 'Parisienne', cursive;
 }
 
+a:link, a:visited {
+    color: pink;
+}
+a:hover {
+    color: white;
+}
+
