@@ -10,6 +10,10 @@ h1, h3, h4{
     font-family: 'Parisienne', cursive;
 }
 
+p{
+    width: 600px;
+}
+
 a:link, a:visited {
     color: pink;
 }
@@ -18,5 +22,5 @@ a:hover {
 }
 
 #left {
-    
+
 }
