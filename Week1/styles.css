@@ -8,6 +8,8 @@ body {
 
 h1 {
     font-size: 50px;
+    display: flex;
+    /*justify-content: center;*/
 }
 
 h3 {
@@ -34,6 +36,12 @@ a:link, a:visited {
 a:hover {
     color: white;
 }
+  #author {
+    /*display: flex;
+    justify-content: center;*/
+    margin: -55px 0px 0px 92px;
+    color: pink;
+ } 
 
 .left {
     width: 600px;
