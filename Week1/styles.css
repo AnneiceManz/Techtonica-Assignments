@@ -2,7 +2,7 @@ body {
     background-color: #158000;
     color: pink;
     font-family:'Quicksand', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     margin: 50px;
 }
 
@@ -13,14 +13,10 @@ h1 {
 }
 
 h3 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
-h4 {
-    font-size: 22px;
-}
-
-h1, h3, h4{
+h1, h3{
 
     color: white;
     font-family: 'Parisienne', cursive;
@@ -39,8 +35,9 @@ a:hover {
   #author {
     /*display: flex;
     justify-content: center;*/
-    margin: -55px 0px 0px 92px;
+    margin: -55px 0px 90px 92px;
     color: pink;
+    font-size: 22px;
  } 
 
 .left {
