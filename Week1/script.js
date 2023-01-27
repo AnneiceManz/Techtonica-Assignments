@@ -1,7 +1,7 @@
-const colorChange = document.getElementById('ingredients');
+const colorChange = document.getElementById('ingredientList');
 
 colorChange.addEventListener('mouseover', (event)=> {
-    event.target.style.color = "cyan";
+    event.target.style.color = "white";
     setTimeout(()=> {
         event.target.style.color="";
     }, 500)
