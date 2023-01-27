@@ -17,6 +17,10 @@ function displayYummy() {
 }
 //Yummy button event listener
 document.getElementById('yummyButton').addEventListener('click', displayYummy)
+//Pictures are hidden on with double click of button
+yummyButton.ondblclick = (event) =>{yummyImg.style.display="none"};
+
+
 
 //Cheers button displays cheers picture
 function displayCheers() {
@@ -26,4 +30,6 @@ function displayCheers() {
     cheersImg.style.display= "block"
 }
 //Cheers button event listener
-document.getElementById('cheersButton').addEventListener('click', displayCheers)
+document.getElementById('cheersButton').addEventListener('click', displayCheers);
+//Pictures are hidden on with double click of button
+cheersButton.ondblclick = (event) =>{cheersImg.style.display="none"};
