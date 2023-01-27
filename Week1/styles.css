@@ -59,6 +59,8 @@ a:hover {
     margin-left: 60px;
 }
 
-@media(){
-    
+@media(max-width: 1080px){
+    img {
+        width: 100%;
+    }
 }
