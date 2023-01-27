@@ -1,3 +1,4 @@
+//Function to change color of Ingredients list on mouse over.
 const colorChange = document.getElementById('ingredientList');
 
 colorChange.addEventListener('mouseover', (event)=> {
@@ -6,3 +7,4 @@ colorChange.addEventListener('mouseover', (event)=> {
         event.target.style.color="";
     }, 500)
 }, false)
+
