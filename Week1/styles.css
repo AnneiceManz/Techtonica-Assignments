@@ -1,13 +1,20 @@
 body {
-    background-color: #158000;
-    color: pink;
+    background-color: #ECF4DF;
+    color: #BF74A1;
     font-family:'Quicksand', sans-serif;
     font-size: 20px;
     margin: 50px;
 }
+header {
+    background-color: #192e15;
+    
+    margin: -20px -50px;
+}
 
 h1 {
     font-size: 50px;
+    color: #ECF4DF;
+    font-family: 'Parisienne', cursive;
     display: flex;
     /*justify-content: center;*/
 }
@@ -16,10 +23,10 @@ h3 {
     font-size: 30px;
 }
 
-h1, h3{
+h3{
 
-    color: white;
-    font-family: 'Parisienne', cursive;
+    color: #4C0E33;
+
 }
 
 p {
@@ -27,16 +34,16 @@ p {
 }
 
 a:link, a:visited {
-    color: pink;
+    color: #BF74A1;
 }
 a:hover {
-    color: white;
+    color: #4C0E33;
 }
   #author {
     /*display: flex;
     justify-content: center;*/
     margin: -55px 0px 90px 92px;
-    color: pink;
+    color: #BF74A1;
     font-size: 22px;
  } 
 
