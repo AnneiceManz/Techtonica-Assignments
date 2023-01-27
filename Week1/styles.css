@@ -64,3 +64,13 @@ a:hover {
         width: 100%;
     }
 }
+@media (min-width: 1081px) {
+    body{
+        background-color: red;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        background-color: green;
+    }
+}
