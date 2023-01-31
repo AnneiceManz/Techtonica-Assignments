@@ -15,7 +15,7 @@ img {
     margin: 50px;
 }
 
-#projects div {
+.projects div {
     width: 33%;
     display: flex;
     float: right;
