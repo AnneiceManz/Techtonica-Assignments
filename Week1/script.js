@@ -33,3 +33,27 @@ function displayCheers() {
 document.getElementById('cheersButton').addEventListener('click', displayCheers);
 //Pictures are hidden on with double click of button
 cheersButton.ondblclick = (event) =>{cheersImg.style.display="none"};
+
+
+//Adding checkbox to ol -Recipe steps
+let recipeList= document.getElementsByClassName('recipeSteps')[0].children;
+//console.log(recipeList)
+
+function addCheckBox (li) {
+    let checkBox = document.createElement('input');
+    checkBox.type= 'checkbox';
+    li.prepend(checkBox)
+    
+    checkBox.onclick= (event) => {
+        if (checkBox.checked){
+        li.style="text-decoration:line-through"; 
+        } else {
+            li.style=""
+        }
+        }
+}
+
+for(let i=0; i<recipeList.length; i++) {
+    addCheckBox(recipeList[i])
+}
+
