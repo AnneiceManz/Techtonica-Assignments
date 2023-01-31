@@ -1,0 +1,53 @@
+body {
+    background-color: #158000;
+    color: pink;
+    font-family:'Quicksand', sans-serif;
+    font-size: 20px;
+    margin: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    display: flex;
+    /*justify-content: center;*/
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h1, h3{
+
+    color: white;
+    font-family: 'Parisienne', cursive;
+}
+
+p {
+    width: 600px;
+}
+
+a:link, a:visited {
+    color: pink;
+}
+a:hover {
+    color: white;
+}
+  #author {
+    /*display: flex;
+    justify-content: center;*/
+    margin: -55px 0px 90px 92px;
+    color: pink;
+    font-size: 22px;
+ } 
+
+.left {
+    width: 600px;
+    float: left;
+    margin-top: 30px;
+}
+
+.right {
+    width: 600px;
+    float: left;
+    margin-left: 60px;
+}
