@@ -1,0 +1,17 @@
+#projects div {
+    width: 33%;
+    display: flex;
+    float: right;
+}
+
+
+#contactForm h2 {
+    width: 100%;
+    display: flex;
+    float: left;
+}
+#contacts div {
+    width: 50%;
+    display: flex;
+    float: right;
+}
