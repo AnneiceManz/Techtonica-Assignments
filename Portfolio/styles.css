@@ -1,3 +1,11 @@
+body{
+    margin: 100px;
+}
+
+img {
+    border-radius: 100px;
+}
+
 #projects div {
     width: 33%;
     display: flex;
@@ -5,13 +13,12 @@
 }
 
 
-#contactForm h2 {
-    width: 100%;
+#contactForm {
     display: flex;
     float: left;
 }
 #contacts div {
     width: 50%;
     display: flex;
-    float: right;
+    float: left;
 }
