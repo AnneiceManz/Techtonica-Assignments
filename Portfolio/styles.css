@@ -1,9 +1,18 @@
 body{
+    max-width: 900px;
     margin: 100px;
 }
+ header {
+    text-align: center;
+ }
 
 img {
     border-radius: 100px;
+}
+
+#about {
+    text-align: center;
+    margin: 50px;
 }
 
 #projects div {
@@ -13,12 +22,7 @@ img {
 }
 
 
+
 #contactForm {
-    display: flex;
-    float: left;
-}
-#contacts div {
-    width: 50%;
-    display: flex;
-    float: left;
+    text-align: center;
 }
