@@ -4,9 +4,14 @@ body{
     margin: auto;
     padding: 10px;
     font-size: 24px;
+    background-color: #E9D5F4;
 }
  header {
     text-align: center;
+ }
+
+ h1 , h2 {
+    color: #395A0D;
  }
 
 header img, .projectDiv img {
@@ -24,20 +29,20 @@ form {
 }
 
 input {
-    border:1px solid green;
+    border:1px solid #395A0D;
     border-radius: 8px;
     width: 300px;
     height: 20px;
 }
 
 textarea {
-    border:1px solid green;
+    border:1px solid #395A0D;
     border-radius: 8px;
     width: 300px;
 }
 
 button {
-    border: 1px solid black;
+    border: 1px solid #395A0D;
     border-radius: 8px;
     width: 100px;
     height: 30px;
