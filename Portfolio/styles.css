@@ -10,15 +10,11 @@ body{
  }
 
 header img, .projectDiv img {
-    border-radius: 100px;
+    border-radius: 150px;
     align-self: center;
 }
 #myFamily {
     text-align: center;
-}
-
-a:hover {
-    
 }
 
 form {
