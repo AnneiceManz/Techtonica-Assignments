@@ -9,9 +9,16 @@ body{
     text-align: center;
  }
 
-img {
+header img, .projectDiv img {
     border-radius: 100px;
     align-self: center;
+}
+#myFamily {
+    text-align: center;
+}
+
+a:hover {
+    
 }
 
 form {
@@ -72,11 +79,12 @@ button {
     text-align: center;
 }
 
-footer {
+.contact{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 50%;
     text-align: center;
-}
+} 
 
 i {
     color: black;
