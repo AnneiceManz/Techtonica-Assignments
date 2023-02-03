@@ -1,27 +1,9 @@
 
-/* Box Model Hack */
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Clear fix hack */
-  .clearfix:after {
-       content: ".";
-       display: block;
-       clear: both;
-       visibility: hidden;
-       line-height: 0;
-       height: 0;
-  }
-  
-  .clear {
-      clear: both;
-  }
-  
 body{
     max-width: 900px;
     margin: auto;
-    padding: 100px;
+    padding: 10px;
+    font-size: 20px;
 }
  header {
     text-align: center;
@@ -30,6 +12,32 @@ body{
 img {
     border-radius: 100px;
     align-self: center;
+}
+
+form {
+    width: 100%;
+    max-width: none;
+}
+
+input {
+    border:1px solid green;
+    border-radius: 8px;
+    width: 300px;
+    height: 20px;
+}
+
+textarea {
+    border:1px solid green;
+    border-radius: 8px;
+    width: 300px;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
 }
 
 #about {
@@ -71,8 +79,6 @@ img {
     }
     #readMore {
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }
 
