@@ -1,6 +1,9 @@
+
+
 body{
     max-width: 900px;
-    margin: 100px;
+    margin: auto;
+    padding: 100px;
 }
  header {
     text-align: center;
@@ -8,6 +11,7 @@ body{
 
 img {
     border-radius: 100px;
+    align-self: center;
 }
 
 #about {
@@ -32,4 +36,21 @@ img {
 #contactForm {
     padding-top: 100px;
     text-align: center;
+}
+
+
+@media (max-width: 940px) {
+    main , footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #cool div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .projectDiv {
+        border: 0;
+    }
 }
