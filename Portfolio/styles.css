@@ -1,5 +1,23 @@
 
-
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
 body{
     max-width: 900px;
     margin: auto;
@@ -31,7 +49,13 @@ img {
     padding: 10px;
 }
 
+.readMore {
+    display: none;
+}
 
+.show {
+    display: block!important;
+}
 
 #contactForm {
     padding-top: 100px;
@@ -41,6 +65,14 @@ img {
 @media (max-width: 600px) {
     .projectDiv p {
         display: none;
+    }
+    .extraContent {
+        display: none;
+    }
+    #readMore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
