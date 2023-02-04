@@ -81,15 +81,14 @@ button {
 }
 
 .contact{
+    padding-top: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    float: right;
     width: 50%;
     text-align: center;
 } 
 
-i {
-    color: black;
-}
 
 @media (max-width: 600px) {
     body {
