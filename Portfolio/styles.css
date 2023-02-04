@@ -5,14 +5,19 @@ body{
     padding: 10px;
     font-size: 24px;
     background-color: #E9D5F4;
+    font-family: 'Quicksand', sans-serif;
+
 }
+
  header {
     text-align: center;
  }
 
- h1 , h2 {
+ h1 , h2, h3, h4 {
     color: #395A0D;
+    font-family: 'Sacramento', cursive;
  }
+
 
 header img, .projectDiv img {
     border-radius: 150px;
