@@ -44,5 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
     inputHTML.forEach((item) => {
       html += `<li><strong>${item.name}</strong><br>Where: ${item.places} | When: ${item.hours} | Chapter: ${item.chapters}</li><br>`;
     });
-    document.querySelector("#event").innerHTML = html;
+    document.getElementById("event").innerHTML = html;
   });
