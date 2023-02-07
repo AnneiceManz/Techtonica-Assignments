@@ -67,23 +67,19 @@
     width: 600px;
     height: 600px;
     background-color: var(--secondary-light);
-    box-shadow: var(--primary-dark) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
   }
 
   input[type='color'] {
     /* -webkit-appearance: none; */
     background-color: var(--primary-light);
-    width: 100px;
-    height: 80px;
+    width: 200px;
+    height: 180px;
     border: none;
-  }
-  
-  input[type='color']::-webkit-color-swatch-wrapper {
-    padding: 0;
   }
   
   input[type='color']::-webkit-color-swatch {
     border: 1px solid white;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
   }
