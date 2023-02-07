@@ -22,8 +22,8 @@ class Event{
   
   function createInstance(array){
     let hours = "TBD";
-    let places= "TBD"
-    let chapters= "TBD"
+    let places= "TBD";
+    let chapters= "TBD";
     let results =[];
     for (let i=0; i<array.length; i++) {
       let name = array[i];
@@ -35,3 +35,14 @@ class Event{
   
   let inputHTML=createInstance(names);
   console.log(inputHTML)
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Handler when the DOM is fully loaded
+    let html = "";
+    inputHTML.forEach((item) => {
+      html += `<li><strong>${item.name}</strong><br>Where: ${item.places} | When: ${item.hours} | Chapter: ${item.chapters}</li><br>`;
+    });
+    document.querySelector("#event").innerHTML = html;
+  });
