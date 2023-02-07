@@ -26,3 +26,9 @@
     /* footer support */
     margin-bottom: 100px;
   }
+
+  h1 {
+    line-height: 1.2;
+    font-size: 80px;
+    text-align: center;
+  }
