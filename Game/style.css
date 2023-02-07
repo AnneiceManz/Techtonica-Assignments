@@ -52,6 +52,7 @@
 
   button, input {
     padding: 10px 20px;
+    width: 80%;
     border: 1px solid var(--primary-dark);
     border-radius: 5px;
   }
