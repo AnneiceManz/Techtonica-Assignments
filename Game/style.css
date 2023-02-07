@@ -42,6 +42,14 @@
     text-align: center;
   }
 
+  .userSet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+
   button, input {
     padding: 10px 20px;
     border: 1px solid var(--primary-dark);
