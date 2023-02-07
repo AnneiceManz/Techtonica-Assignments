@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Etch-a-sketch</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <h1>Etch-a-sketch</h1>
+        </header>
+        <main>
+            <div id="grid" class="grid"></div>
+            <div class="userSet">
+                <label for="gridSlider">Pick a grid size</label><br>
+                <input id="gridSlider" type="range" value="32" min="8" max="128" /><br>
+                <span id="gridSize">32 x 32</span>
+                <label for="colorWheel">Pick a Color</label><br>
+                <input id="colorWheel" type="color" value="000000" /><br>
+                <button id="eraserBtn">Eraser</button><br>
+                <button id="clearBtn">Clear</button>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
