@@ -59,7 +59,7 @@
 
   button:hover,
   input[type='color']:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
   }
 
   .grid {
@@ -72,6 +72,7 @@
 
   input[type='color'] {
     /* -webkit-appearance: none; */
+    background-color: var(--primary-light);
     width: 100px;
     height: 80px;
     border: none;
