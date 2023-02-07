@@ -27,6 +27,15 @@
     margin-bottom: 100px;
   }
 
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 200px;
+    max-width: 1200px;
+    margin:50px;
+  }
+
   h1 {
     line-height: 1.2;
     font-size: 80px;
