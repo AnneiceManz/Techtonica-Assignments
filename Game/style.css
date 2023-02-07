@@ -57,7 +57,8 @@
     border-radius: 5px;
   }
 
-  button:hover {
+  button:hover,
+  input[type='color']:hover {
     transform: scale(1.05);
   }
 
@@ -67,4 +68,21 @@
     height: 600px;
     background-color: var(--secondary-light);
     box-shadow: var(--primary-dark) 0px 3px 8px;
+  }
+
+  input[type='color'] {
+    /* -webkit-appearance: none; */
+    width: 100px;
+    height: 80px;
+    border: none;
+  }
+  
+  input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  input[type='color']::-webkit-color-swatch {
+    border: 1px solid white;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
