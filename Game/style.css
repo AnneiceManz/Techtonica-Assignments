@@ -68,6 +68,13 @@ label {
     transform: scale(1.10);
   }
 
+  button.active {
+    background-color: var(--primary-dark);
+    color: white;
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1.10);
+  }
+
   .grid {
     display: grid;
     width: 600px;
@@ -84,7 +91,6 @@ label {
   }
 
   input[type='color'] {
-    /* -webkit-appearance: none; */
     background-color: var(--primary-light);
     width: 200px;
     height: 180px;
