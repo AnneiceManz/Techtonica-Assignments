@@ -91,3 +91,12 @@ function activateButton(newMode) {
    colorBtn.onclick = () => setCurrentMode('color')
     eraserBtn.onclick = () => setCurrentMode('eraser')
     clearBtn.onclick = () => reloadGrid()
+
+    function reloadGrid() {
+        clearGrid()
+        colorGrid(currentSize)
+      }
+      
+      function clearGrid() {
+        grid.innerHTML = ''
+      }
