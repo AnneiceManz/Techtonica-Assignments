@@ -1,3 +1,4 @@
+//Create default values that page returns to when refreshed
 const defaultColor = "#000000";
 const defaultSize = 32;
 const defaultMode = "color";
@@ -6,6 +7,7 @@ let currentMode = defaultMode;
 let currentColor = defaultColor;
 let currentSize = defaultSize;
 
+//Grabbing important elements from the HTML
 const gridSlider = document.getElementById("gridSlider");
 const gridSize = document.getElementById("gridSize");
 const colorWheel = document.getElementById("colorWheel");
@@ -14,32 +16,33 @@ const colorBtn = document.getElementById("colorBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 const clearBtn = document.getElementById("clearBtn");
 
+//create event for when the mouse is clicked and dragged in the grid or released
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-//When slider is moved by the mouse the gridSize will change to match the value of the slider.
-
-//Connect color picker to grid
-
+//Sets the currentSize of the grid
 function setCurrentSize(newSize) {
   currentSize = newSize;
 }
 
+//Changes the size of the grid when slider is moved
 function changeSize(value) {
   setCurrentSize(value);
   updateGridSize(value);
   reloadGrid();
 }
 
+//Changes the span that shows grid size to the current value of the slider
 function updateGridSize(value) {
   gridSize.innerHTML = `${value} x ${value}`;
 }
 
+//changes the amount of grid columns and rows to the current value of the slider
 function colorGrid(size) {
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
+//creates a new div element the color slected from the color wheel
   for (let i = 0; i < size * size; i++) {
     const gridElement = document.createElement("div");
     gridElement.classList.add("gridElement");
@@ -49,13 +52,16 @@ function colorGrid(size) {
   }
 }
 
+//Event listerners that change the grid size and span that displays grid size
 gridSlider.onmousemove = (e) => updateGridSize(e.target.value);
 gridSlider.onchange = (e) => changeSize(e.target.value);
 
+//sets the current slected color
 function setCurrentColor(newColor) {
   currentColor = newColor;
 }
 
+//if current mode is color, color will appear on the grid when the mouse is pressed and dragged. If current mode is eraser any colored elements on the grid will be set back to the default background color or "erased"
 function color(e) {
   if (e.type === "mouseover" && !mouseDown) return;
   if (currentMode === "color") {
@@ -64,13 +70,17 @@ function color(e) {
     e.target.style.backgroundColor = "#fefefe";
   }
 }
+
+// event listener that set the color to the slected color of the color input
 colorWheel.oninput = (e) => setCurrentColor(e.target.value);
 
+//sets current mode
 function setCurrentMode(newMode) {
   activateButton(newMode);
   currentMode = newMode;
 }
 
+//makes eraser button and color button change colors based on current mode
 function activateButton(newMode) {
   if (currentMode === "color") {
     colorBtn.classList.remove("active");
@@ -84,16 +94,21 @@ function activateButton(newMode) {
     eraserBtn.classList.add("active");
   }
 }
+
+//event listener that activates whether we are coloring or erasing
 colorBtn.onclick = () => setCurrentMode("color");
 eraserBtn.onclick = () => setCurrentMode("eraser");
 
+//clears the grid. Makes it empty
 function clearGrid() {
   grid.innerHTML = "";
 }
 
+//when grid is cleared the grid is set to the last current size
 function reloadGrid() {
   clearGrid();
   colorGrid(currentSize);
 }
 
+//event listerner for clear button
 clearBtn.onclick = () => reloadGrid();
