@@ -112,3 +112,11 @@ function reloadGrid() {
 
 //event listerner for clear button
 clearBtn.onclick = () => reloadGrid();
+
+//function to setDefaults on load
+function setDefaults(){
+    colorGrid(defaultSize);
+    activateButton(defaultMode);
+}
+
+window.onload= setDefaults;
