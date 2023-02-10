@@ -29,7 +29,7 @@ body {
 header {
   background-color: #d3d0d4;
   padding: 10px;
-  background: url("./Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg");
+  background: url("./images/Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg");
 }
 
 main {
@@ -186,7 +186,7 @@ footer {
   font-size: 26px;
   text-shadow: -1px 0.5px 0.5px #858585, 0.5px 0.5px 0.5px #858585, 0.5px -0.5px 0 #858585,
   -0.5px -0.5px 0 #858585;
-  background: url('./Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg');
+  background: url('./images/Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg');
 }
 
 .fa-brands {
