@@ -52,7 +52,8 @@
     align-items: center;
     justify-content: center;
     width: 25%;
-    
+    padding: 20px;
+    border-radius: 20px;
   }
 
 label {
@@ -113,18 +114,32 @@ label {
     border: 0.2px solid #010101;
   }
 
+  #etchASketch {
+    border: 40px solid var(--primary-dark);
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
+  }
   .grid {
     display: grid;
     width: 600px;
     height: 600px;
     background-color: var(--secondary-light);
-    border: 20px solid var(--primary-dark);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
   }
 
   .rotateable {
     transition: all 100ms;
+}
+
+.circles {
+  display: flex;
+  text-align: center;
+  background-color: var(--primary-dark);
+  padding-top: 20px;
+}
+
+.fa-circle {
+  color: white;
+  width: 300px;
 }
 
   #gridSize {
