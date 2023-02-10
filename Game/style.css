@@ -135,11 +135,11 @@ label {
   text-align: center;
   background-color: var(--primary-dark);
   padding-top: 20px;
+  gap: 450px;
 }
 
 .fa-circle {
   color: white;
-  width: 300px;
 }
 
   #gridSize {
