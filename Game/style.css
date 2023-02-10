@@ -23,6 +23,7 @@ body {
   font-family: "Handlee", cursive;
   /* footer support */
   margin-bottom: 100px;
+  background-color: var(--secondary-light);
 }
 
 header {
@@ -46,12 +47,12 @@ h1 {
   text-align: center;
   font-family: "Pacifico", cursive;
   color: var(--primary-dark);
-  text-shadow: -1px 1px 5px #000, 1px 1px 5px #000, 1px -1px 0 #000,
-    -1px -1px 0 #000;
+  text-shadow: -1px 1px 5px #595959, 1px 1px 5px #595959, 1px -1px 0 #595959,
+    -1px -1px 0 #595959;
 }
 
 .userSet {
-  background-color: var(--primary-light);
+  /* background-color: var(--primary-light); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +60,7 @@ h1 {
   width: 25%;
   padding: 20px;
   border-radius: 20px;
+  box-shadow: #595959 0px 3px 8px;
 }
 
 label {
@@ -73,6 +75,8 @@ button {
   border: 1px solid var(--primary-dark);
   border-radius: 5px;
   background-color: var(--secondary-light);
+  box-shadow: #858585 0px 3px 8px;
+
 }
 
 button:hover,
@@ -121,7 +125,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 #etchASketch {
   border: 40px solid var(--primary-dark);
   border-radius: 40px;
-  box-shadow: black 0px 3px 8px;
+  box-shadow: #595959 0px 3px 8px;
 }
 .grid {
   display: grid;
@@ -143,8 +147,8 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .fa-circle {
-  color: white;  text-shadow: -1px 2px 2px #000, 1px 1px 0.5px #000, 1px 1px 0 #000,
-  1px 1px 0 #000;
+  color: white;  text-shadow: -1px 2px 2px #595959, 1px 1px 0.5px #595959, 1px 1px 0 #595959,
+  1px 1px 0 #595959;
 
 }
 
@@ -157,7 +161,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="color"] {
-  background-color: var(--primary-light);
+  background-color: var(--secondary-light);
   width: 180px;
   height: 180px;
   border: none;
@@ -166,7 +170,7 @@ input[type="color"] {
 input[type="color"]::-webkit-color-swatch {
   border: 1px solid white;
   border-radius: 100px;
-  box-shadow: black 0px 3px 8px;
+  box-shadow: #858585 0px 3px 8px;
 }
 
 footer {
@@ -179,8 +183,8 @@ footer {
   gap: 20px;
   width: 100%;
   font-size: 26px;
-  text-shadow: -1px 0.5px 0.5px #000, 0.5px 0.5px 0.5px #000, 0.5px -0.5px 0 #000,
-  -0.5px -0.5px 0 #000;
+  text-shadow: -1px 0.5px 0.5px #858585, 0.5px 0.5px 0.5px #858585, 0.5px -0.5px 0 #858585,
+  -0.5px -0.5px 0 #858585;
   background: url('./Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg');
 }
 
