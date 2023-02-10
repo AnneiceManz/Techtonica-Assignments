@@ -135,3 +135,15 @@ label {
     border-radius: 100px;
     box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
   }
+
+  footer {
+    position: absolute;
+    bottom: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 75%;
+    font-size: 24px;
+  }
