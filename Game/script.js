@@ -108,7 +108,40 @@ function clearGrid() {
 function reloadGrid() {
   clearGrid();
   colorGrid(currentSize);
+  shakeElement(grid);
+  rotateElement(grid);
 }
+
+//function to make selected element shake and rotate.
+const wiggletime = 100;
+function shakeElement(element) {
+  element.classList.add('rotateable');
+  element.style.marginLeft = '20px';
+
+  setTimeout(function() {
+    element.style.marginLeft = '-120px';
+    setTimeout(function() {
+      element.style.marginLeft = '0px';
+    }, wiggletime);
+  }, wiggletime);
+
+  return true;
+}
+
+function rotateElement(element) {
+  element.classList.add('rotateable');
+  element.style.transform = 'rotate(20deg)';
+
+  setTimeout(function() {
+    element.style.transform = 'rotate(-20deg)';
+    setTimeout(function() {
+      element.style.transform = 'rotate(0deg)';
+    }, wiggletime);
+  }, wiggletime);
+
+  return true;
+}
+
 
 //event listerner for clear button
 clearBtn.onclick = () => reloadGrid();
