@@ -15,6 +15,7 @@ const grid = document.getElementById("grid");
 const colorBtn = document.getElementById("colorBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 const clearBtn = document.getElementById("clearBtn");
+const etchAsketch= document.getElementById("etchASketch")
 
 //create event for when the mouse is clicked and dragged in the grid or released
 let mouseDown = false;
@@ -108,8 +109,8 @@ function clearGrid() {
 function reloadGrid() {
   clearGrid();
   colorGrid(currentSize);
-  shakeElement(grid);
-  rotateElement(grid);
+  shakeElement(etchAsketch);
+  rotateElement(etchAsketch);
 }
 
 //function to make selected element shake and rotate.
@@ -141,6 +142,7 @@ function rotateElement(element) {
 
   return true;
 }
+
 
 
 //event listerner for clear button
