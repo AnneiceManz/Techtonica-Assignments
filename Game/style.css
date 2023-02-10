@@ -63,7 +63,7 @@ label {
     text-decoration: underline;
 }
 
-  button, input {
+  button {
     padding: 10px 20px;
     width: 80%;
     border: 1px solid var(--primary-dark);
@@ -153,7 +153,7 @@ label {
 
   input[type='color'] {
     background-color: var(--primary-light);
-    width: 200px;
+    width: 180px;
     height: 180px;
     border: none;
   }
