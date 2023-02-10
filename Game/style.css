@@ -1,139 +1,136 @@
 :root {
-    --primary-dark: #C70039;
-    --primary-light: #D3D0D4;
-    --secondary-light: #fefefe;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  html {
-    /* footer support */
-    position: relative;
-    min-height: 100%;
-  }
-  
-  body {
-    color: var(--primary-dark);
-    font-family: 'Handlee', cursive;
-    /* footer support */
-    margin-bottom: 100px;
-  }
-
-  header {
-    background-color: #D3D0D4;
-    padding: 10px;
-    background: url('./Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg');
-  }
-
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    padding-top: 100px;
-    margin:50px;
-  }
-
-  h1 {
-    line-height: 1.2;
-    font-size: 80px;
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-    color: var(--primary-dark);
-    text-shadow: -1px 1px 5px #000,
-    1px 1px 5px #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000;
-  }
-
-  .userSet {
-    background-color: var(--primary-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-label {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: underline;
+  --primary-dark: #c70039;
+  --primary-light: #d3d0d4;
+  --secondary-light: #fefefe;
 }
 
-  button {
-    padding: 10px 20px;
-    width: 80%;
-    border: 1px solid var(--primary-dark);
-    border-radius: 5px;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  button:hover,
-  input[type='color']:hover {
-    transform: scale(1.10);
-  }
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
 
-  button.active {
-    background-color: var(--primary-dark);
-    color: white;
-    transition: transform 0.05s ease-in-out;
-    transform: scale(1.10);
-  }
+body {
+  color: var(--primary-dark);
+  font-family: "Handlee", cursive;
+  /* footer support */
+  margin-bottom: 100px;
+}
 
-  input[type=range] {
-    appearance: none;
-    width: 100%; 
-    background: transparent; 
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
-    appearance: none;
-    border: 1px solid #000000;
-    height: 36px;
-    width: 16px;
-    border-radius: 3px;
-    background: var(--primary-dark);
-    cursor: pointer;
-    margin-top: -14px;
-    box-shadow: 1px 1px 1px #000000; 
-  }
-  
-  input[type=range]:hover {
-    transform: scale(1.10);
-  }
+header {
+  background-color: #d3d0d4;
+  padding: 10px;
+  background: url("./Gold-Glitter-Backgrounds-for-Desktop-5-768x610.jpg");
+}
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  padding-top: 100px;
+  margin: 50px;
+}
 
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    background: var(--secondary-light);
-    border-radius: 1.3px;
-    border: 0.2px solid black;
-  }
+h1 {
+  line-height: 1.2;
+  font-size: 80px;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  color: var(--primary-dark);
+  text-shadow: -1px 1px 5px #000, 1px 1px 5px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
 
-  #etchASketch {
-    border: 40px solid var(--primary-dark);
-    border-radius: 40px;
-    box-shadow: black 0px 3px 8px;
-  }
-  .grid {
-    display: grid;
-    width: 600px;
-    height: 600px;
-    background-color: var(--secondary-light);
-  }
+.userSet {
+  background-color: var(--primary-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 20px;
+  border-radius: 20px;
+}
 
-  .rotateable {
-    transition: all 100ms;
+label {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px 20px;
+  width: 80%;
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+}
+
+button:hover,
+input[type="color"]:hover {
+  transform: scale(1.1);
+}
+
+button.active {
+  background-color: var(--primary-dark);
+  color: white;
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1.1);
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: var(--primary-dark);
+  cursor: pointer;
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
+input[type="range"]:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: var(--secondary-light);
+  border-radius: 1.3px;
+  border: 0.2px solid black;
+}
+
+#etchASketch {
+  border: 40px solid var(--primary-dark);
+  border-radius: 40px;
+  box-shadow: black 0px 3px 8px;
+}
+.grid {
+  display: grid;
+  width: 650px;
+  height: 650px;
+  background-color: var(--secondary-light);
+}
+
+.rotateable {
+  transition: all 100ms;
 }
 
 .circles {
@@ -148,45 +145,45 @@ label {
   color: white;
 }
 
-  #gridSize {
-    font-size: 24px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: var(--secondary-light);
-    padding: 5px;
-  }
+#gridSize {
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: var(--secondary-light);
+  padding: 5px;
+}
 
-  input[type='color'] {
-    background-color: var(--primary-light);
-    width: 180px;
-    height: 180px;
-    border: none;
-  }
-  
-  input[type='color']::-webkit-color-swatch {
-    border: 1px solid white;
-    border-radius: 100px;
-    box-shadow: black 0px 3px 8px;
-  }
+input[type="color"] {
+  background-color: var(--primary-light);
+  width: 180px;
+  height: 180px;
+  border: none;
+}
 
-  footer {
-    position: absolute;
-    bottom: 5px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    font-size: 24px;
-  }
+input[type="color"]::-webkit-color-swatch {
+  border: 1px solid white;
+  border-radius: 100px;
+  box-shadow: black 0px 3px 8px;
+}
 
-  .fa-brands {
-    color: var(--primary-dark);
-    transition: transform 0.5s ease-in-out;
-  }
+footer {
+  position: absolute;
+  bottom: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  font-size: 24px;
+}
 
-  .fa-brands:hover {
-    transform: rotate(360deg) scale(1.5);
-    color: var(--primary-light);
-  }
+.fa-brands {
+  color: var(--primary-dark);
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: rotate(360deg) scale(1.5);
+  color: var(--primary-light);
+}
