@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import CardsArray from './components/CardsArray';
 import shuffleCards from './components/Shuffle';
+import Card from './components/card';
 import logo from './logo.svg';
 import './App.css';
 
