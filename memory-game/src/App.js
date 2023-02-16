@@ -2,12 +2,94 @@ import { useEffect, useState, useRef } from 'react'
 import CardsArray from './components/CardsArray';
 import shuffleCards from './components/Shuffle';
 import Card from './components/card';
-import logo from './logo.svg';
 import './App.css';
 
 
 
 function App() {
+  const [openCards, setOpenCards] = useState([]);
+  const [clearedCards, setClearedCards] = useState({});
+  const [shouldDisableAllCards, setShouldDisableAllCards] = useState(false);
+  const [moves, setMoves] = useState(0);
+  const [showModal, setShowModal] =useState(false);
+  const [bestScore, setBestScore] = useState(
+    JSON.parse(localStorage.getItem("bestScore")) || Number.POSITIVE_INFINITY
+  );
+  const timeout = useRef(null);
+
+  const disable = () => {
+    setShouldDisableAllCards(true);
+  };
+
+  const enable = () => {
+    setShouldDisableAllCards(false)
+  };
+
+  const checkCompletion = () => {
+    if (Object.keys(clearedCards).length=== CardsArray.length) {
+      setShowModal(true);
+      const highScore = Math.min(moves, bestScore);
+      setBestScore(highScore);
+      localStorage.setItem("bestScore", highScore);
+    };
+  };
+
+  const evalute = () => {
+    const [first, second] = openCards;
+    enable();
+    if (Card[first].type===Card[second].type) {
+      setClearedCards((prev) => ({...prev, [Card[first].type]: true }));
+      setOpenCards([]);
+      return
+    }
+    timeout.current = setTimeout(() => {
+      setOpenCards([])
+    }, 500)
+  };
+
+  const handleCardClick = (index) => {
+    if (openCards.length===1) {
+      setOpenCards((prev) => [...prev, index]);
+      setMoves ((moves) => moves + 1);
+      disable();
+    } else {
+      clearTimeout(timeout.current);
+      setOpenCards([index]);
+    };
+  };
+
+  useEffect(() => {
+    let timeout=null;
+    if (openCards.length === 2) {
+      timeout = setTimeout(evalute, 300);
+    }
+    return () => {
+      clearTimeout(timeout);
+    }
+  }, [openCards]);
+
+  useEffect(() => {
+    checkCompletion();
+  }, [clearedCards]);
+  const checkIsFlipped = (index) => {
+    return openCards.includes(index);
+  };
+
+  const checkIsInactive = (card) => {
+    return Boolean(clearedCards[Card.type]);
+  };
+
+  const handleRestart = () => {
+    setClearedCards({});
+    setOpenCards([]);
+    setShowModal(false);
+    setMoves(0);
+    setShouldDisableAllCards(false);
+    // set a shuffled deck of cards
+    setOpenCards(shuffleCards(CardsArray.concat(CardsArray)));
+  };
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +99,19 @@ function App() {
         </div>
       </header>
       <div className="container">
-
+      {Card.map((card, index) => {
+          return (
+            <Card
+              key={index}
+              card={card}
+              index={index}
+              isDisabled={shouldDisableAllCards}
+              isInactive={checkIsInactive(card)}
+              isFlipped={checkIsFlipped(index)}
+              onClick={handleCardClick}
+            />
+          );
+        })}
       </div>
       <footer>
         <div className='score'>

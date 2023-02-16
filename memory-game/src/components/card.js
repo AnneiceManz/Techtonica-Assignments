@@ -1,8 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
 import stevensShirt from './src/images/stevensShirt'
 
-const Card = ({ onClick, card, index, isInactive, isFlipped, isDisabled }) => {
+const Card = ({ onClick, Card, index, isInactive, isFlipped, isDisabled }) => {
     const handleClick=() => {
         !isFlipped && !isDisabled && onClick(index);
     };
@@ -16,7 +16,7 @@ const Card = ({ onClick, card, index, isInactive, isFlipped, isDisabled }) => {
                 <img src={stevensShirt} alt='stevens star shirt'/>
             </div>
             <div className='card-face card-back-face'>
-                <img src={card.image}/>
+                <img src={Card.image}/>
             </div>
         </div>
     );
