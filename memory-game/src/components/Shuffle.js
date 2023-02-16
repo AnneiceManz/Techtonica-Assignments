@@ -5,7 +5,9 @@ function shuffleCards(array) {
     for (let i=length; i>0; i--) {
         let randomIndex = Math.floor(Math.random() * i);
         let currentIndex = i - 1;
-        swap(array, currIndex, randomIndex)
+        let temp=array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex]=temp;
     }
     return array
 }
