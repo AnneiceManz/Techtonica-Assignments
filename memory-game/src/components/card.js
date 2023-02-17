@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
-import stevensShirt from './src/images/stevensShirt'
+import stevensShirt from "/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/stevensShirt.jpeg";
 
-const Card = ({ onClick, Card, index, isInactive, isFlipped, isDisabled }) => {
-    const handleClick=() => {
+function Card({ onClick, Card, index, isInactive, isFlipped, isDisabled }) {
+    const handleClick = () => {
         !isFlipped && !isDisabled && onClick(index);
     };
     return (
@@ -11,15 +11,15 @@ const Card = ({ onClick, Card, index, isInactive, isFlipped, isDisabled }) => {
             "is-flipped": isFlipped,
             "is-inactive": isInactive
         })}
-        onClick={handleClick}>
+            onClick={handleClick}>
             <div className='card-face card-front-face'>
-                <img src={stevensShirt} alt='stevens star shirt'/>
+                <img src={stevensShirt} alt='stevens star shirt' />
             </div>
             <div className='card-face card-back-face'>
-                <img src={Card.image}/>
+                <img src={Card.image} />
             </div>
         </div>
     );
-};
+}
 
 export default Card
