@@ -31,12 +31,12 @@
   margin-top: 10px;
 }
 
-.App .score {
+.App footer .score {
   justify-content: center;
   display: flex;
 }
 
-.App .score div {
+.App footer .score div {
   padding: 8px;
 }
 
