@@ -1,17 +1,20 @@
 import { useEffect, useState, useRef } from 'react'
-import CardsArray from './components/CardsArray';
-import shuffleCards from './components/Shuffle';
-import Card from './components/card';
+import CardsArray from './CardsArray';
+import ShuffleCards from './components/Shuffle';
+import Card from './components/Card';
 import './App.css';
 
 
 
 function App() {
+  const [cards, setCards] = useState(() =>
+  ShuffleCards(CardsArray.concat(CardsArray))
+  );
   const [openCards, setOpenCards] = useState([]);
   const [clearedCards, setClearedCards] = useState({});
   const [shouldDisableAllCards, setShouldDisableAllCards] = useState(false);
   const [moves, setMoves] = useState(0);
-  const [showModal, setShowModal] =useState(false);
+  // const [showModal, setShowModal] =useState(false);
   const [bestScore, setBestScore] = useState(
     JSON.parse(localStorage.getItem("bestScore")) || Number.POSITIVE_INFINITY
   );
@@ -27,7 +30,7 @@ function App() {
 
   const checkCompletion = () => {
     if (Object.keys(clearedCards).length=== CardsArray.length) {
-      setShowModal(true);
+      // setShowModal(true);
       const highScore = Math.min(moves, bestScore);
       setBestScore(highScore);
       localStorage.setItem("bestScore", highScore);
@@ -37,8 +40,8 @@ function App() {
   const evalute = () => {
     const [first, second] = openCards;
     enable();
-    if (Card[first].type===Card[second].type) {
-      setClearedCards((prev) => ({...prev, [Card[first].type]: true }));
+    if (cards[first].type===cards[second].type) {
+      setClearedCards((prev) => ({...prev, [cards[first].type]: true }));
       setOpenCards([]);
       return
     }
@@ -82,11 +85,11 @@ function App() {
   const handleRestart = () => {
     setClearedCards({});
     setOpenCards([]);
-    setShowModal(false);
+    // setShowModal(false);
     setMoves(0);
     setShouldDisableAllCards(false);
     // set a shuffled deck of cards
-    setOpenCards(shuffleCards(CardsArray.concat(CardsArray)));
+    setCards(ShuffleCards(CardsArray.concat(CardsArray)));
   };
 
 
@@ -99,7 +102,7 @@ function App() {
         </div>
       </header>
       <div className="container">
-      {Card.map((card, index) => {
+      {cards.map((card, index) => {
           return (
             <Card
               key={index}

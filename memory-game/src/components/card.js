@@ -1,8 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import stevensShirt from "/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/stevensShirt.jpeg";
+// import "/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/card.scss"
 
-function Card({ onClick, Card, index, isInactive, isFlipped, isDisabled }) {
+function Card({ onClick, card, index, isInactive, isFlipped, isDisabled }) {
     const handleClick = () => {
         !isFlipped && !isDisabled && onClick(index);
     };
@@ -16,7 +17,7 @@ function Card({ onClick, Card, index, isInactive, isFlipped, isDisabled }) {
                 <img src={stevensShirt} alt='stevens star shirt' />
             </div>
             <div className='card-face card-back-face'>
-                <img src={Card.image} />
+                <img src={card.image} />
             </div>
         </div>
     );

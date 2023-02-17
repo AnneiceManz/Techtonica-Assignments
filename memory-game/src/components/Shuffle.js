@@ -1,6 +1,7 @@
 import React from "react";
 
-function shuffleCards(array) {
+
+function ShuffleCards(array) {
     let length=array.length;
     for (let i=length; i>0; i--) {
         let randomIndex = Math.floor(Math.random() * i);
@@ -12,4 +13,4 @@ function shuffleCards(array) {
     return array
 }
 
-export default shuffleCards
+export default ShuffleCards

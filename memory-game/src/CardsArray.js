@@ -1,4 +1,4 @@
-import React from 'react';
+
 import amethyst from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/amethyst.png'
 import garnet from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/garnet.png'
 import lion from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/lion.png'
