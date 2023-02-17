@@ -1,36 +1,30 @@
-
-import amethyst from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/amethyst.png'
-import garnet from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/garnet.png'
-import lion from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/lion.png'
-import pearl from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/pearl.png'
-import rose_quartz from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/rose_quartz.png'
-import steven from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/steven.png'
+import React from 'react'
 
 const CardsArray = [
     {
         type: "Amethyst",
-        image: {amethyst}
+        image: require('/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/amethyst.png')
     },
     {
         type: "Garnet",
-        image: {garnet}
+        image: require('/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/garnet.png')
     },
     {
         type: "Pearl",
-        image: {pearl}
+        image: require('/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/pearl.png')
     },
     {
         type: "Steven",
-        image: {steven}
+        image: require('/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/steven.png')
     },
     {
         type: "Rose Quartz",
-        image: {rose_quartz}
+        image: require('/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/rose_quartz.png')
     },
     {
         type: "Lion",
-        image: {lion}
+        image: require('/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/lion.png')
     }
-]
+  ]
 
 export default CardsArray
