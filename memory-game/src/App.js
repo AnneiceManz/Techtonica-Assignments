@@ -79,7 +79,7 @@ function App() {
   };
 
   const checkIsInactive = (card) => {
-    return Boolean(clearedCards[Card.type]);
+    return Boolean(clearedCards[card.type]);
   };
 
   const handleRestart = () => {
