@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import stevensShirt from "/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/stevensShirt.jpeg";
-// import "/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/card.scss"
+import '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/card.css'
 
 function Card({ onClick, card, index, isInactive, isFlipped, isDisabled }) {
     const handleClick = () => {
