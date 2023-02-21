@@ -1,0 +1,133 @@
+
+body{
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #E9D5F4;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+ header {
+    text-align: center;
+ }
+
+ h1 , h2, h3, h4 {
+    color: #395A0D;
+    font-family: 'Sacramento', cursive;
+ }
+
+
+header img, .projectDiv img {
+    border-radius: 200px;
+    align-self: center;
+}
+#myFamily {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: none;
+    font-weight: bold;
+}
+
+input {
+    border:1px solid #395A0D;
+    border-radius: 8px;
+    width: 300px;
+    height: 20px;
+}
+
+textarea {
+    border:1px solid #395A0D;
+    border-radius: 8px;
+    width: 300px;
+}
+
+button {
+    border: 1px solid #395A0D;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#about {
+    text-align: center;
+    margin: 50px;
+}
+
+#cool div{
+    margin-bottom: 50px;
+}
+
+.projectDiv {
+    width: 30%;
+    text-align: center;
+    float: left;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.readMore {
+    display: none;
+}
+
+.show {
+    display: block!important;
+}
+
+#contactForm {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.contact{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    width: 50%;
+    text-align: center;
+} 
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+    .projectDiv p {
+        display: none;
+    }
+    .extraContent {
+        display: none;
+    }
+    #readMore {
+        display: block;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 940px) {
+    body {
+        font-size: 20px;
+    }
+    main , footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #cool div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .projectDiv {
+        border: 0;
+    }
+}
+
+
