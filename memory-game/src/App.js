@@ -3,6 +3,7 @@ import CardsArray from './CardsArray';
 import ShuffleCards from './components/Shuffle';
 import Card from './components/Card';
 import './App.css';
+import stevenuniverselogo from '/Users/tpl1122_17/Techtonica/Techtonica-Assignments/memory-game/src/images/stevenuniverselogo.png'
 
 
 
@@ -96,6 +97,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={stevenuniverselogo} width="200px"/>
         <h3>Play the Card Matching Game</h3>
         <div>
           Find two matching cards to make them vanish.
