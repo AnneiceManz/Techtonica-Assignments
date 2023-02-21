@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Etch-a-sketch</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/2998250e96.css" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/2998250e96.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <h1>Etch-A-Sketch</h1>
+        </header>
+        <main>
+            <div id="etchASketch">
+                <div id="grid" class="grid"></div>
+                <div class="circles">
+                    <i class="fa-solid fa-circle fa-6x"></i>
+                    <i class="fa-solid fa-circle fa-6x"></i>
+                </div>
+            </div>
+            <div class="userSet">
+                <label for="gridSlider">Pick a grid size</label><br>
+                <input id="gridSlider" type="range" value="32" min="8" max="128" /><br>
+                <span id="gridSize">32 x 32</span><br><br>
+                <label for="colorWheel">Pick a Color</label><br>
+                <input id="colorWheel" type="color" value="000000" /><br>
+                <button id="colorBtn">Color</button><br>
+                <button id="eraserBtn">Eraser</button><br>
+                <button id="clearBtn">Clear</button>
+            </div>
+        </main>
+        <footer>
+            <span>Project by: Anneice Manzanares | 2023</span>
+            <a href="https://github.com/AnneiceManz"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anneice-manzanares/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/AnneiceManz"><i class="fa-brands fa-twitter"></i></a>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
