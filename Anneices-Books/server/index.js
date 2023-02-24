@@ -35,6 +35,24 @@ app.get('/api/books/:bookID', cors(), async (req, res) => {
     }
 });
 
+app.post('/books/', (request, response) => {
+    // store request body in variable
+    let body = request.body; 
+
+    const newBookObj = {
+        "isbn": body.isbn,
+        "title": body.title,
+        "author": body.author,
+        "format": body.format,
+        "pages": body.pages
+    }
+    booklist.push(newBookObj);
+    return response.json(books);
+});
+
+
+
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'../client/index.html'));
 });
