@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import path from 'path';
-import books from '../client/books.js';
+import books from './books.js';
 import pretty from 'express-prettify'
 
 const app = express();
