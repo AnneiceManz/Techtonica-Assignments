@@ -50,6 +50,29 @@ app.post('/books/', (request, response) => {
     return response.json(books);
 });
 
+app.put('api/books/:ID', (request, response) => {
+    // store isbn in variable 
+    let bookISBN = request.params.ID;
+        
+    // store request body in variable
+    let body = request.body; 
+    
+    //iterate through booklist to find the book with the matching isbn 
+    for(let i = 0; i < books.length; i++) {
+        // find the book to update
+        if(books[i]['isbn'] == bookISBN) {
+            console.log("i am in here");
+            booklist[i]['title'] = body.title;
+            booklist[i]['isbn'] = body.isbn;
+            booklist[i]['author'] = body.author,
+            booklist[i]['publisher'] = body.publisher
+            return response.json(books);
+        }
+    }
+        // the book was not found message 
+        return response.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
+    });
+
 
 
 
