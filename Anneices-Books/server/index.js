@@ -73,7 +73,21 @@ app.put('api/books/:ID', (request, response) => {
         return response.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
     });
 
-
+    app.delete('/books/:ID', (request, response) => {
+        // store isbn in a variable 
+        let bookISBN = request.params.ID;
+    
+        //iterate through booklist to find the book with the matching isbn 
+        for(let i = 0; i < books.length; i++) {
+            if(books[i].isbn == bookISBN) {
+                let deletedBook = books[i];
+                books.splice(i, 1);
+                // response.json(booklist); 
+                return response.send(`The book that was deleted was: ${deletedBook.title} by ${deletedBook.author}.`);
+            }
+        }
+        return response.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
+    })
 
 
 app.get('/', (req, res) => {
