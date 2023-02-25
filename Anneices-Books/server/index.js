@@ -35,9 +35,9 @@ app.get('/api/books/:bookID', cors(), async (req, res) => {
     }
 });
 
-app.post('/books/', (request, response) => {
+app.post('/api/books', (req, res) => {
     // store request body in variable
-    let body = request.body; 
+    let body = req.body; 
 
     const newBookObj = {
         "isbn": body.isbn,
@@ -46,16 +46,16 @@ app.post('/books/', (request, response) => {
         "format": body.format,
         "pages": body.pages
     }
-    booklist.push(newBookObj);
-    return response.json(books);
+    books.push(newBookObj);
+    return res.json(books);
 });
 
-app.put('api/books/:ID', (request, response) => {
+app.put('api/books/:ID', (req, res) => {
     // store isbn in variable 
-    let bookISBN = request.params.ID;
+    let bookISBN = req.params.ID;
         
     // store request body in variable
-    let body = request.body; 
+    let body = req.body; 
     
     //iterate through booklist to find the book with the matching isbn 
     for(let i = 0; i < books.length; i++) {
@@ -67,16 +67,16 @@ app.put('api/books/:ID', (request, response) => {
             books[i]['author'] = body.author,
             books[i]['format'] = body.format,
             books[i]['pages'] = body.pages
-            return response.json(books);
+            return res.json(books);
         }
     }
         // the book was not found message 
-        return response.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
+        return res.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
     });
 
-    app.delete('/books/:ID', (request, response) => {
+    app.delete('/api/books/:ID', (req, res) => {
         // store isbn in a variable 
-        let bookISBN = request.params.ID;
+        let bookISBN = req.params.ID;
     
         //iterate through booklist to find the book with the matching isbn 
         for(let i = 0; i < books.length; i++) {
@@ -84,10 +84,10 @@ app.put('api/books/:ID', (request, response) => {
                 let deletedBook = books[i];
                 books.splice(i, 1);
                 // response.json(booklist); 
-                return response.send(`The book that was deleted was: ${deletedBook.title} by ${deletedBook.author}.`);
+                return res.send(`The book that was deleted was: ${deletedBook.title} by ${deletedBook.author}.`);
             }
         }
-        return response.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
+        return res.status(400).send(`The Book ISBN (${bookISBN}) you tried looking for was not found`);
     })
 
 
