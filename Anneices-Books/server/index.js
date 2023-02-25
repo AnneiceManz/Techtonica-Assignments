@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(express.static('client'));
 
 app.get("/api/books", (req, res) => {
-    res.json(books);
+    return res.json(books);
 });
 
 
@@ -30,7 +30,7 @@ app.get('/api/books/:bookID', cors(), async (req, res) => {
     let requestedBook = req.params.bookID;
     for (let book of books) {
         if(book.isbn === requestedBook) {
-            res.json(book);
+            return res.json(book);
         }
     }
 });
@@ -62,10 +62,11 @@ app.put('api/books/:ID', (request, response) => {
         // find the book to update
         if(books[i]['isbn'] == bookISBN) {
             console.log("i am in here");
-            booklist[i]['title'] = body.title;
-            booklist[i]['isbn'] = body.isbn;
-            booklist[i]['author'] = body.author,
-            booklist[i]['publisher'] = body.publisher
+            books[i]['isbn'] = body.isbn;
+            books[i]['title'] = body.title;
+            books[i]['author'] = body.author,
+            books[i]['format'] = body.format,
+            books[i]['pages'] = body.pages
             return response.json(books);
         }
     }
