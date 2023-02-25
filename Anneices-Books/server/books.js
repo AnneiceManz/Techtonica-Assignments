@@ -348,6 +348,13 @@ const BOOKS = [{
     "format": "Paperback",
     "pages": "531"
 },
+{
+    "isbn": "123456789",
+    "title": "Fake Book",
+    "author": "A",
+    "format": "K",
+    "pages": "3"
+},
 // {
 //     "isbn": "",
 //     "title": "",

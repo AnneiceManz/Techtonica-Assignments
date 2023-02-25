@@ -50,7 +50,7 @@ app.post('/api/books', (req, res) => {
     return res.json(books);
 });
 
-app.put('api/books/:ID', (req, res) => {
+app.put('/api/books/:ID', (req, res) => {
     // store isbn in variable 
     let bookISBN = req.params.ID;
         
@@ -92,7 +92,7 @@ app.put('api/books/:ID', (req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'../client/index.html'));
+    res.sendFile(path.join(__dirname,'client', 'index.html'));
 });
 
 
