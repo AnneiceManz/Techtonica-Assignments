@@ -1,17 +1,30 @@
-const WeatherForm = (props) =>{
+import { useState } from 'react'
+
+const WeatherForm = ({ onSubmit }) =>{
+  //state changes when user inputs city name. By default it is empty/null
+  const [city, setCity] = useState(null)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit ({ city });
+  };
+
+  const onChange = (e) => setCity(e.target.value);
+
 
 
     return (
         <div className="weather">
-        <h1 className="App-header">Techtonica Weather Forecast App</h1>
-        <form onSubmit={props.handleSubmit}>
+        <h1 className="App-header">Anneice's Waether App</h1>
+        <form onSubmit={handleSubmit}>
           <input
             id="city-name"
             type="text"
             placeholder="Please enter the city name"
             name="city"
-            value={props.city}
-            readOnly
+            onChange={onChange}
+            value={city}
+            required
           />
           <input type="submit" value="Submit" />
         </form>
