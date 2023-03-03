@@ -27,7 +27,6 @@ function App() {
 
   return (
     <div className="App">
-      <img id="weather-app-pic" src='https://www.timeanddate.com/scripts/weather_og.php?h1=Weather&h2=Local%20Weather%20Around%20the%20World'/>
       <WeatherForm city={city} handleSubmit={handleSubmit}/>
       {!result ? <p>Press Submit to see the weather.</p> : <WeatherCard data={result} /> }
     </div>
