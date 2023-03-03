@@ -23,6 +23,11 @@ const WeatherCard = (props) => {
                 {props.data.data.main.feels_like} <sup>o</sup>F
               </span>
             </p>
+            <p>
+              Humidity: <span className="data">
+                {props.data.data.main.humidity}%
+              </span>
+            </p>
 
             </div>
 

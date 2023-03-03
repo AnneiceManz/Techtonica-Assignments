@@ -5,7 +5,7 @@ import WeatherCard from './components/weatherCard';
 
 function App() {
   const [city, setCity] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState("");
 
   //A function to do the get request and set the state from the hard code data
   const loadCity = (city) => {
