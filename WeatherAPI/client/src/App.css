@@ -28,13 +28,14 @@ input[type=submit] {
   margin: auto;
   padding-left: 20px;
  }
- .App-header{
+ /* .App-header{
    color:blueviolet
- }
+ } */
 .data{
   color: purple
 }
 
 #weather-app-pic {
   width: 500px;
+  border-radius: 10px;
 }
