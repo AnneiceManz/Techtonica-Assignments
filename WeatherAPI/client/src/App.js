@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <WeatherForm city={city} handleSubmit={handleSubmit}/>
-      {!result ? <p>Please click the botton to see Data</p> : <WeatherCard data={result} /> }
+      {!result ? <p>Press Submit to see the weather</p> : <WeatherCard data={result} /> }
     </div>
   );
 }
