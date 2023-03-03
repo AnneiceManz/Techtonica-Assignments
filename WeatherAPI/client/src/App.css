@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -27,15 +28,27 @@ input[type=submit] {
   text-align: center;
   margin: auto;
   padding-left: 20px;
+  border: 1px solid lightgray;
  }
  /* .App-header{
    color:blueviolet
  } */
 .data{
-  color: purple
+  font-size: 20px;
+  color: #2BA98F
+}
+
+.date-time {
+  color: #2BA98F;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #weather-app-pic {
   width: 500px;
   border-radius: 10px;
+}
+
+p{
+  font-size: 20px;
 }

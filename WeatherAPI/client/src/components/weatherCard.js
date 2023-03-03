@@ -7,7 +7,7 @@ const WeatherCard = (props) => {
         <div className="weather-card">
             <div className="result">
               <p>
-                <span className="data">
+                <span className="date-time">
                    {moment().format('LLLL')}
                 </span>
               </p>
