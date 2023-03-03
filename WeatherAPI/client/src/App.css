@@ -33,11 +33,12 @@ input[type=submit] {
  } */
 .data{
   font-size: 20px;
-  color: #2BA98F
+  color: #2BA98F;
+  font-weight: 400;
 }
 
 .date-time {
-  color: #2BA98F;
+  color: #DE7A17;
   font-size: 24px;
   font-weight: bold;
 }
@@ -50,6 +51,10 @@ input[type=submit] {
 
 p{
   font-size: 20px;
+}
+
+.keys {
+  font-weight: bold;
 }
 
 input {
