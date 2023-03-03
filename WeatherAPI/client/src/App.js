@@ -9,7 +9,7 @@ function App() {
 
   //A function to do the get request and set the state from the hard code data
   const loadCity = () => {
-    fetch("http://localhost:8080/api/weather")
+    fetch(`http://localhost:8080/api/weather?{params}`)
       .then((response) => response.json())
       .then((result) => {
         //console.log(result)

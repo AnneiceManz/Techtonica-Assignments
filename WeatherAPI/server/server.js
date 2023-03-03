@@ -11,7 +11,7 @@ app.use(express.json());
 
 // creates an endpoint for the route /api
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello from My template ExpressJS' });
+    res.json({ message: 'Hello Anneice. This is the data on the server' });
   });
 
 // creates an endpoint for the route /api/weather
