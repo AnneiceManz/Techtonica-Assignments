@@ -10,17 +10,26 @@ body {
 }
 
 form{
-margin-left: 150px;
+  margin: auto;
+}
+
+#city-name {
+  font-size: 20px;
+  width: 200px;
+}
+
+input[type=submit] {
+  font-size: 20px;
 }
 
 
 .App {
-  /* text-align: center; */
+  text-align: center;
   margin: auto;
   padding-left: 20px;
  }
  .App-header{
-   color:blue
+   color:blueviolet
  }
 .data{
   color: purple
