@@ -24,7 +24,7 @@ app.get('/api/weather/', (req, res) => {
     units: "Imperial",
   });
   const url = `https://api.openweathermap.org/data/2.5/weather?${params}`;
-  console.log(url);
+  // console.log(url);
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
@@ -32,7 +32,7 @@ app.get('/api/weather/', (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-    })
+    });
 });
 
 // console.log that your server is up and running
