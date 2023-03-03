@@ -8,19 +8,20 @@ function App() {
   const [result, setResult] = useState(null);
 
   //A function to do the get request and set the state from the hard code data
-  const loadCity = () => {
-    fetch(`http://localhost:8080/api/weather?{params}`)
+  const loadCity = (city) => {
+    const params = new URLSearchParams({ cityName: city });
+    fetch(`http://localhost:8080/api/weather?${params}`)
       .then((response) => response.json())
       .then((result) => {
         //console.log(result)
-        setCity(result.weather[0].name);
+        setCity(city);
         setResult(result);
       });
   }
 
- const handleSubmit = (e) =>{
-  e.preventDefault();
-  loadCity();
+ const handleSubmit = (city) =>{
+  // e.preventDefault();
+  loadCity(city);
  }
 
 
