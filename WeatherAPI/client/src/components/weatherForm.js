@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-const WeatherForm = ({ onSubmit }) =>{
+const WeatherForm = (props) =>{
   //state changes when user inputs city name. By default it is empty/null
   const [city, setCity] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit ({ city });
+    props.handleSubmit (city);
   };
 
   const onChange = (e) => setCity(e.target.value);
