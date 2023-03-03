@@ -15,13 +15,13 @@ app.get('/', (req, res) => {
   });
 
 // creates an endpoint for the route /api/weather
-app.get('/weather', (req, res) => {
+app.get('/api/weather/', (req, res) => {
   const city =req.query.cityName;
   const apiKey = process.env.API_KEY;
   const params = new URLSearchParams ({
-    q: req.query.cityName,
-    appid: process.env.API_KEY,
-    units: "imperial",
+    q: city,
+    appid: apiKey,
+    units: "Imperial",
   });
   const url = `https://api.openweathermap.org/data/2.5/weather?${params}`;
   console.log(url);
