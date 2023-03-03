@@ -12,7 +12,7 @@ const WeatherCard = (props) => {
                 {props.data.data.weather[0].description}
               </span>
             </p>
-            <img src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@4x.png`} alt={"Icon from Open Weather Api"}/>
+            <img src={`http://openweathermap.org/img/wn/${props.data.data.weather[0].icon}@4x.png`} alt={"Icon from Open Weather Api"}/>
             <p>
               Temperature: <span className="data">
                 {props.data.data.main.temp} <sup>o</sup>F
