@@ -1,9 +1,16 @@
+import moment from 'moment';
+
 const WeatherCard = (props) => {
 
 
     return (
         <div className="weather-card">
             <div className="result">
+              <p>
+                <span className="data">
+                   {moment().format('LLLL')}
+                </span>
+              </p>
                 <p>City: <span className="data">
                     {props.data.data.name}, {props.data.data.sys.country}
                 </span>
@@ -26,6 +33,11 @@ const WeatherCard = (props) => {
             <p>
               Humidity: <span className="data">
                 {props.data.data.main.humidity}%
+              </span>
+            </p>
+            <p>
+              Wind: <span className="data">
+                {props.data.data.wind.speed} mph
               </span>
             </p>
 
