@@ -7,7 +7,7 @@ const Game = (props) => {
 
     const loadData = () => {
         //Needed to remember to change the path in my request from the server
-        fetch('https://opentdb.com/api.php?amount=15&category=32&difficulty=easy&type=multiple')
+        fetch('http://localhost:5050/api/game')
             .then((response) => response.json())
             .then(data => {
                 console.log("This is line 11", data.results);
