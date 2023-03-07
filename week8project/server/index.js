@@ -30,7 +30,7 @@ app.get('/api/game', async (req, res) =>{
     const URL ="https://opentdb.com/api.php?amount=15&category=32&difficulty=easy&type=multiple"
     const apiRequest = await fetch(URL);
     const questions = await apiRequest.json();
-    res.send({questions})
+    res.send(questions)
   } catch (err) {
     console.log(err)
   }
