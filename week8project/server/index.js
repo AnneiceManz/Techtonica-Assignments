@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // //creates an endpoint for the route `/`
 app.get("/", (req, res) => {
-    res.json("Hello Techtonica Server for a Game");
+    res.json("Hello Anneice.This is your Server for your game.");
   });
 
 // Make the GET request for the GAME Api for grabbing all the questions 
