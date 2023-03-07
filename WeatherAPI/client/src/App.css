@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 50px;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  margin: auto;
+}
+
+#city-name {
+  font-size: 20px;
+  width: 200px;
+}
+
+input[type=submit] {
+  font-size: 20px;
+}
+
+.App {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+ }
+ /* .App-header{
+   color:blueviolet
+ } */
+.data{
+  font-size: 20px;
+  color: #2BA98F;
+  font-weight: 400;
+}
+
+.date-time {
+  color: #DE7A17;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#weather-app-pic {
+  width: 500px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+p{
+  font-size: 20px;
+}
+
+.keys {
+  font-weight: bold;
+}
+
+input {
+  font-family: 'Quicksand', sans-serif;
+}
