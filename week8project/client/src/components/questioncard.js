@@ -1,8 +1,10 @@
+import { decode } from 'html-entities'
+
 const QuestionCard = (props) => {
     
     return (
       <div className={"question-section"}>
-        <div className='question-text'>{props.question.question}</div>
+        <div className='question-text'>{decode(props.question.question)}</div>
         <div className='answer-section'>
 		<button>True</button>
 		<button>False</button>
