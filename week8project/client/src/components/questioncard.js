@@ -1,15 +1,15 @@
 import { decode } from 'html-entities'
 
-const QuestionCard = ({amount, result, score, setScore, questionNum, setQuestionNumber}) => {
+const QuestionCard = ({amount, results, score, setScore, questionNum, setQuestionNumber}) => {
 
   //Decode questions
-  const question = decode(result.question);
+  const question = decode(results.question);
 
   //Create new array of choices from correct and incorrect answers
-  let answers = [result.correct_answer, ...result.incorrect_answers];
+  let answers = [results.correct_answer, ...results.incorrect_answers];
 
   //decode answer choices
-  answers = answerChoices.map((answer) => decode(answer))
+  answers = answers.map((answer) => decode(answer))
 
   //create decoded correct answer variable
   const correct_answer = answers[0]
@@ -27,10 +27,17 @@ const QuestionCard = ({amount, result, score, setScore, questionNum, setQuestion
     
     return (
       <div className={"question-section"}>
-        <div className='question-text'>{decode(props.question.question)}</div>
-        <div className='answer-section'>
-		<button>True</button>
-		<button>False</button>
+        <h2>
+          Question {questionNum +1}/{amount}
+        </h2>
+        <p>{question}</p>
+        <div className="answers">
+          <form>
+            <button onChange={handleUserAnswer}>{shuffledAnswers[0]}</button>
+            <button onChange={handleUserAnswer}>{shuffledAnswers[1]}</button>
+            <button onChange={handleUserAnswer}>{shuffledAnswers[2]}</button>
+            <button onChange={handleUserAnswer}>{shuffledAnswers[3]}</button>
+          </form>
         </div>
       </div>
     );
