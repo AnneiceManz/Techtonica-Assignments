@@ -1,12 +1,12 @@
 import { decode } from 'html-entities'
 
-const QuestionCard = ({amount, results, score, setScore, questionNum, setQuestionNumber}) => {
+const QuestionCard = (props) => {
 
   //Decode questions
-  const question = decode(results.question);
+  const question = decode(props.question.question);
 
   //Create new array of choices from correct and incorrect answers
-  let answers = [results.correct_answer, ...results.incorrect_answers];
+  let answers = [props.question.correct_answer, ...props.question.incorrect_answers];
 
   //decode answer choices
   answers = answers.map((answer) => decode(answer))
@@ -19,18 +19,15 @@ const QuestionCard = ({amount, results, score, setScore, questionNum, setQuestio
 
   const handleUserAnswer = (e) => {
     if (shuffledAnswers[e.target.value] === correct_answer) {
-      setScore(score + 1);
-      setQuestionNumber(questionNum +1);
+      props.setScore(props.score + 1);
+      props.setQuestionNumber(props.questionNum +1);
       e.target.checked = false
     }
   }
     
     return (
       <div className={"question-section"}>
-        <h2>
-          Question {questionNum +1}/{amount}
-        </h2>
-        <p>{question}</p>
+        <h3>{question}</h3>
         <div className="answers">
           <form>
             <button onChange={handleUserAnswer}>{shuffledAnswers[0]}</button>
