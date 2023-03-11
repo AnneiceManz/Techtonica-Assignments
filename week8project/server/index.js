@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 
   // //hardcode the game response for testing reasons to don't saturate my API call. 
 app.get('/api/game', (req, res) =>{
-    const URL ="https://opentdb.com/api.php?amount=15&category=32&difficulty=easy&type=multiple"
+    const URL ="https://opentdb.com/api.php?amount=15&category=32&difficulty=easy&type=multiple";
     fetch(URL)
     .then((res) => res.json())
     .then((data) => {

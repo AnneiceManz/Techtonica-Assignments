@@ -62,17 +62,13 @@ const Game = (props) => {
         <div>
         <div className="Container">
             <div className='question-count'>
-                <div>
-                    {/* <h4>Score: {correctScore}/10</h4> */}
-                    {/* <h4>Missed: {incorrectScore}/10</h4> */}
-                </div>
                 <span>Question {currentQuestion + 1}/{questions.length}</span>
             </div>
             <div>
                 {questionsAnswers && 
                 <QuestionCard 
                 questions={questions}
-                questionsAnswersA={questionsAnswers[currentQuestion]} 
+                questionsAnswers={questionsAnswers[currentQuestion]} 
                 currentQuestion={currentQuestion} 
                 setCurrentQuestion={setCurrentQuestion} 
                 score={score}
