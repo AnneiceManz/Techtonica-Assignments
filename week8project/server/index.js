@@ -25,18 +25,19 @@ app.get("/", (req, res) => {
 
 
   // //hardcode the game response for testing reasons to don't saturate my API call. 
-app.get('/api/game', async (req, res) =>{
-  try {
+app.get('/api/game', (req, res) =>{
     const URL ="https://opentdb.com/api.php?amount=15&category=32&difficulty=easy&type=multiple"
-    const apiRequest = await fetch(URL);
-    const questions = await apiRequest.json();
-    res.send(questions)
-  } catch (err) {
-    console.log(err)
-  }
-    // res.json(fakedata);
+    fetch(URL)
+    .then((res) => res.json())
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+//  res.json(fakedata);
 })
 
 
 
-app.listen(PORT, () => console.log(`Hola! Server running on Port http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Hello Anneice! Server running on Port http://localhost:${PORT}`));

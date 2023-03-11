@@ -19,7 +19,7 @@ const QuestionCard = (props) => {
 }
     
     return (
-    <div>{disable ? <div className="score-section">You score: {props.score}/15</div> :
+    <div>{disable ? <div className="score-section">Your score: {props.score}/15</div> :
         <div className="question-section">
             <div className="question-text">
                 <h1>{props.questionsAnswers[4]}</h1>
