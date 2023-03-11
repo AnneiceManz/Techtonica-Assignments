@@ -14,7 +14,7 @@ const QuestionCard = (props) => {
                 // alert('This is the end of the quiz!');
             }   
     if (props.questionsAnswers[e.target.value].isCorrect === true) {
-            props.setScore+1
+            props.setScore +1
       }
 }
     
